@@ -1,0 +1,35 @@
+{
+    "name": "iotyun/iot-huawei-php",
+    "description": "huawei dianxin iot SDK",
+    "homepage": "http://www.iotyun.vip/",
+    "keywords": [
+        "NB-IOT",
+        "huawei",
+        "dianxin",
+        "iot",
+        "sdk"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "iotyun",
+            "email": "ytpay@qq.com",
+            "homepage": "http://www.iotyun.vip/"
+        }
+    ],
+
+    "support": {
+        "email": "ytpay@qq.com"
+    },
+    "require": {
+        "php": ">=7.1.0",
+        "ext-openssl": "*"
+    },
+	"autoload": {
+        "psr-4": {
+            "iotyun\\huaweiiot\\": "src/"
+        }
+    },
+
+    "minimum-stability": "dev"
+}
