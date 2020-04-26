@@ -206,7 +206,4 @@ class Device
         }
      }
 
-
-     
-
 }
