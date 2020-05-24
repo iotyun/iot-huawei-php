@@ -7,7 +7,7 @@ use iotyun\huaweiiot\client\dto\QueryBatchDevicesInfoInDTO;
 use iotyun\huaweiiot\client\invokeapi\DataCollection;
 use iotyun\huaweiiot\client\NorthApiException;
 
-class DataCollections
+class Data
 {
     
     static function queryBatchDevicesInfo(array $queryBatchDevicesInfoArray){
