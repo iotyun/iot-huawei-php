@@ -26,6 +26,51 @@ class Data
             $queryBatchDevicesInfoArray['pageSize'] = 25;
         }
         $qbdiInDTO->pageSize = $queryBatchDevicesInfoArray['pageSize'];
+        if (!empty($queryBatchDevicesInfoArray['appId']))
+        {
+            $qbdiInDTO->appId = $queryBatchDevicesInfoArray['appId'];
+        }
+
+        if (!empty($queryBatchDevicesInfoArray['gatewayId']))
+        {
+            $qbdiInDTO->gatewayId = $queryBatchDevicesInfoArray['gatewayId'];
+        }
+        if (!empty($queryBatchDevicesInfoArray['nodeType']))
+        {
+            $qbdiInDTO->nodeType = $queryBatchDevicesInfoArray['nodeType'];
+        }
+        if (!empty($queryBatchDevicesInfoArray['deviceType']))
+        {
+            $qbdiInDTO->deviceType = $queryBatchDevicesInfoArray['deviceType'];
+        }
+        if (!empty($queryBatchDevicesInfoArray['location']))
+        {
+            $qbdiInDTO->location = $queryBatchDevicesInfoArray['location'];
+        }
+        if (!empty($queryBatchDevicesInfoArray['name']))
+        {
+            $qbdiInDTO->name = $queryBatchDevicesInfoArray['name'];
+        }
+        if (!empty($queryBatchDevicesInfoArray['status']))
+        {
+            $qbdiInDTO->status = $queryBatchDevicesInfoArray['status'];
+        }
+        if (!empty($queryBatchDevicesInfoArray['startTime']))
+        {
+            $qbdiInDTO->startTime = $queryBatchDevicesInfoArray['startTime'];
+        }
+        if (!empty($queryBatchDevicesInfoArray['endTime']))
+        {
+            $qbdiInDTO->endTime = $queryBatchDevicesInfoArray['endTime'];
+        }
+        if (!empty($queryBatchDevicesInfoArray['sort']))
+        {
+            $qbdiInDTO->sort = $queryBatchDevicesInfoArray['sort'];
+        }
+        if (!empty($queryBatchDevicesInfoArray['select']))
+        {
+            $qbdiInDTO->select = $queryBatchDevicesInfoArray['select'];
+        }
         
         try {
             $qbdiOutDTO = $dataCollection->queryBatchDevicesInfo($qbdiInDTO, $queryBatchDevicesInfoArray['accessToken']);
