@@ -16,8 +16,16 @@ class DataCollections
         $dataCollection = new DataCollection($northApiClient);
 
         $qbdiInDTO = new QueryBatchDevicesInfoInDTO();
-        $qbdiInDTO->pageNo = 0;
-        $qbdiInDTO->pageSize = 10;
+        if (empty($queryBatchDevicesInfoArray['pageNo']))
+        {
+            $queryBatchDevicesInfoArray['pageNo'] = 0;
+        }
+        $qbdiInDTO->pageNo = $queryBatchDevicesInfoArray['pageNo'];
+        if (empty($queryBatchDevicesInfoArray['pageSize']))
+        {
+            $queryBatchDevicesInfoArray['pageSize'] = 25;
+        }
+        $qbdiInDTO->pageSize = $queryBatchDevicesInfoArray['pageSize'];
         
         try {
             $qbdiOutDTO = $dataCollection->queryBatchDevicesInfo($qbdiInDTO, $queryBatchDevicesInfoArray['accessToken']);
